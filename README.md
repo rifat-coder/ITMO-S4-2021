@@ -1,2 +1,2 @@
 # ITMO-S4-2021
-/appveyor/build/:user/:repo
+import { something } from '@bit/owner.collection.namespace.namespace.comp-id';
