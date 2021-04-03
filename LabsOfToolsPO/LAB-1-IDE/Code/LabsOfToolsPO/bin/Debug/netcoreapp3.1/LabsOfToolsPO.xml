@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LabsOfToolsPO</name>
+    </assembly>
+    <members>
+        <member name="T:LabsOfToolsPO.IAction">
+            <summary>
+            The IAction interface is common to all class of Strategy.
+            It declares a method the ContextCalculate uses to execute a strategy.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.IAction.Execute(System.Double,System.Double)">
+            <summary>
+            General strategy for math actions.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The result of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.StrategyAdd">
+            <summary>
+            StrategyAdd implement an algorithm the ContextCalculate uses.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.StrategyAdd.Execute(System.Double,System.Double)">
+            <summary>
+            Adds two numbers and returns the result
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The sum of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.StrategySubtract">
+            <summary>
+            StrategySubtract implement an algorithm the ContextCalculate uses.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.StrategySubtract.Execute(System.Double,System.Double)">
+            <summary>
+            Subtracts an number from another and returns the result
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The subtracts of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.StrategyMultiply">
+            <summary>
+            StrategyMultiply implement an algorithm the ContextCalculate uses.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.StrategyMultiply.Execute(System.Double,System.Double)">
+            <summary>
+            Multiplies two numbers and returns the result
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The multiplies of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.StrategyDivision">
+            <summary>
+            StrategyDivision implement an algorithm the ContextCalculate uses.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.StrategyDivision.Execute(System.Double,System.Double)">
+            <summary>
+            Divides a numbers by another and returns the result
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The division of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.StrategyPercent">
+            <summary>
+            StrategyPercent implement an algorithm the ContextCalculate uses.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.StrategyPercent.Execute(System.Double,System.Double)">
+            <summary>
+            Percents a numbers by another and returns the result.
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The percent of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.ContextCalculate">
+            <summary>
+            The ContextCalculate calls the execution method on the linked
+            strategy object each time it needs to run the algorithm.
+            The ContextCalculate doesn’t know what type of strategy
+            it works with or how the algorithm is executed.
+            </summary>
+        </member>
+        <member name="P:LabsOfToolsPO.ContextCalculate.Action">
+            <summary>
+            A reference to one of the concrete Strategy.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.ContextCalculate.#ctor(LabsOfToolsPO.IAction)">
+            <summary>
+            Assigning a reference to a Action
+            Clients of the ContextCalculate must associate it with a suitable
+            action that matches the way they expect
+            the ContextCalculate to perform its primary job.
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:LabsOfToolsPO.ContextCalculate.Making(System.Double,System.Double)">
+            <summary>
+            Performing a calculation on two numbers
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns>The result of two numbers.</returns>
+        </member>
+        <member name="T:LabsOfToolsPO.Calculator">
+            <summary>
+            Contains all methods for reading from a file and performing mathematical calculations.
+            </summary>
+        </member>
+        <member name="P:LabsOfToolsPO.Calculator.Path">
+            <summary>
+            The path to the file that contains the user's math values.
+            </summary>
+        </member>
+        <member name="P:LabsOfToolsPO.Calculator.ListOfResults">
+            <summary>
+            List of all results.
+            </summary>
+        </member>
+        <member name="P:LabsOfToolsPO.Calculator.ListOfLinesFromFile">
+            <summary>
+            List of individual lines from a file.
+            </summary>
+        </member>
+        <member name="P:LabsOfToolsPO.Calculator.DictionaryOfActions">
+            <summary>
+            Dictionary of all actions.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.#ctor(System.String)">
+            <summary>
+            Constructor of current class.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.RunCalculator">
+            <summary>
+            Small facade of the calculator.
+            It runs the calculator calculations and outputs the result.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.ReadingFile">
+            <summary>
+            Line-by-line reading from file and save to List Of Lines From File.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.CalculatingLines">
+            <summary>
+            Line-by-line calculation of mathematical expressions.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.PrintResults">
+            <summary>
+            Output of all results.
+            </summary>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.GetListOfResults">
+            <summary>
+            Get list of results like IEnumerator
+            </summary>
+            <returns>ListOfResults</returns>
+        </member>
+        <member name="M:LabsOfToolsPO.Calculator.WorkingWithLine(System.String)">
+            <summary>
+            Calculating all results.
+            </summary>
+            <param name="line"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{3BB3AC01-3C58-4AF5-BE31-8B00AB8F7319}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LabsOfToolsPO/Calculator.cs">
+    <Files>
+      <File FileName="LabsOfToolsPO/Calculator.cs" Line="24" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LabsOfToolsPO" expanded="True">
+            <Node name="LabsOfToolsPO" expanded="True">
+              <Node name="Calculator.cs" selected="True" />
+            </Node>
+            <Node name="TestLabsOfToolsPO" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LabsOfToolsPO PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <AuthorInfo Name="Rifat" Email="rifat0531m@gmail.com" Copyright="Author Rifat Murtazin 2021" Company="ITMO UNIVERSITY" Trademark="Rifat" />
+</Properties>
